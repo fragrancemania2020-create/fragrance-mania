@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragrance Mania — Парфюмерия без иллюзий и фильтров</title>
+    <meta name="description" content="Ольфакторный опыт за рамками маркетинга и раздутых рекламных бюджетов от парфюмерного блогера Ram. Честные обзоры, разбор ниши, люкса и арабской парфюмерии.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Dynamic Canvas for Smoke Particles -->
+    <canvas id="smoke-canvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header class="main-header" id="header">
+        <div class="header-container">
+            <a href="#" class="logo" id="logo-link">
+                <span class="logo-accent">Fragrance</span> Mania
+            </a>
+            
+            <button class="mobile-nav-toggle" id="nav-toggle" aria-label="Открыть меню">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#manifesto" class="nav-link">Философия</a></li>
+                    <li><a href="#about" class="nav-link">Обо мне</a></li>
+                    <li><a href="#stats" class="nav-link">Коллекция</a></li>
+                    <li><a href="#articles" class="nav-link">Статьи</a></li>
+                    <li><a href="#contacts" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-cta">
+                <a href="https://www.youtube.com/@FragranceMania" target="_blank" class="btn btn-header" id="youtube-subscribe-btn">
+                    <svg class="icon-yt" viewBox="0 0 24 24" width="20" height="20">
+                        <path fill="currentColor" d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.516 0-9.387.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.507 9.387.507 9.387.507s7.517 0 9.387-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                    <span>YouTube</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-bg-overlay"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="tagline-badge">Парфюмерия без иллюзий и фильтров</div>
+                    <h1 class="hero-title">Чистый ольфакторный опыт за рамками маркетинга</h1>
+                    <p class="hero-subtitle">
+                        Я сдираю ценники, отключаю внешний шум и оставляю только суть: реальное восприятие, характер и честные впечатления.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#articles" class="btn btn-primary" id="btn-to-articles">Читать статьи</a>
+                        <a href="https://www.youtube.com/@FragranceMania" target="_blank" class="btn btn-secondary" id="btn-to-youtube">Смотреть обзоры</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#manifesto" class="scroll-down" aria-label="Листать вниз" id="scroll-arrow">
+                <div class="arrow-container">
+                    <span class="chevron"></span>
+                    <span class="chevron"></span>
+                </div>
+            </a>
+        </section>
+
+        <!-- Manifesto / Philosophy Section -->
+        <section class="manifesto-section" id="manifesto">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Ольфакторный манифест</span>
+                    <h2 class="section-title">Философия Fragrance Mania</h2>
+                    <div class="title-line"></div>
+                </div>
+                
+                <div class="manifesto-grid">
+                    <!-- Manifesto Card 1 -->
+                    <div class="manifesto-card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                            </svg>
+                        </div>
+                        <h3>Без иллюзий</h3>
+                        <p>Оставляю рекламу и маркетинговые уловки за порогом. Только честное раскрытие на коже, стойкость, шлейф и соответствие заявленной концепции.</p>
+                    </div>
+
+                    <!-- Manifesto Card 2 -->
+                    <div class="manifesto-card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                            </svg>
+                        </div>
+                        <h3>Любая география</h3>
+                        <p>Разбираю всё, что попадает в руки. От громкого европейского люкса и селективной ниши до самобытной арабской парфюмерии и незаслуженно забытой классики.</p>
+                    </div>
+
+                    <!-- Manifesto Card 3 -->
+                    <div class="manifesto-card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                        <h3>Собственный нос</h3>
+                        <p>Анализ для тех, кто привык доверять собственным чувствам, а не красивым слоганам. Я не учу вас, что любить, а лишь помогаю развить ольфакторный вкус.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    
+                    <!-- About Text Content -->
+                    <div class="about-content">
+                        <span class="section-subtitle">Немного обо мне</span>
+                        <h2 class="section-title-left">Кто стоит за Fragrance Mania</h2>
+                        <div class="title-line-left"></div>
+                        
+                        <div class="about-text">
+                            <p>Меня зовут <strong>Рам</strong>. Моя парфюмерная география довольно контрастна: первые ольфакторные воспоминания я собрал в Коростене, а вот настоящую страсть к глубоким ароматам развил в Израиле.</p>
+                            <p>В будни я занят основной работой, а свободное время без остатка отдаю парфюмерии. К счастью, дома в этом увлечении меня полностью поддерживают любимая жена и двое детей — они всегда первыми оценивают мои новые находки.</p>
+                            
+                            <blockquote>
+                                «Всё началось с детского воспоминания. По особым праздникам отец разрешал мне, пацану, пользоваться легендарным рижским Dzintars "Comandor". Этот строгий, мужественный запах навсегда врезался в память. Спустя годы, перерыв сотни флаконов, я так и не нашёл ничего похожего... Но именно этот "призрак детства" заставил меня искать дальше.»
+                            </blockquote>
+                            
+                            <p>Я не создаю духи сам и не считаю себя гуру, но за годы практики научился раскладывать шлейфы и отлично понимать, где за красивым фасадом скрывается обычная пустышка, а что действительно сделано круто — независимо от вида флакона и ценника на коробке.</p>
+                        </div>
+                    </div>
+
+                    <!-- Olfactory Profile / Interactive Note Cards -->
+                    <div class="about-visual">
+                        <div class="visual-card-bg">
+                            <img src="assets/ram.jpg" alt="Рам — создатель Fragrance Mania" class="about-img">
+                        </div>
+                        
+                        <div class="notes-explorer">
+                            <h3 class="notes-title">Любимый ольфакторный профиль</h3>
+                            <p class="notes-instruction">Нажмите на ноту, чтобы узнать больше:</p>
+                            
+                            <div class="notes-grid">
+                                <div class="note-item" data-note="leather" id="note-leather">
+                                    <span class="note-icon">👞</span>
+                                    <span class="note-name">Дорогая кожа</span>
+                                </div>
+                                <div class="note-item" data-note="resins" id="note-resins">
+                                    <span class="note-icon">🔮</span>
+                                    <span class="note-name">Густые смолы</span>
+                                </div>
+                                <div class="note-item" data-note="wood" id="note-wood">
+                                    <span class="note-icon">🪵</span>
+                                    <span class="note-name">Благородное дерево</span>
+                                </div>
+                                <div class="note-item" data-note="oud" id="note-oud">
+                                    <span class="note-icon">🏺</span>
+                                    <span class="note-name">Мистический уд</span>
+                                </div>
+                                <div class="note-item" data-note="saffron" id="note-saffron">
+                                    <span class="note-icon">🌱</span>
+                                    <span class="note-name">Пряный шафран</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Note Detail Display Area -->
+                            <div class="note-detail-box" id="note-detail">
+                                <h4 class="note-detail-title" id="note-detail-title">Выберите ноту</h4>
+                                <p class="note-detail-text" id="note-detail-text">Каждый из этих компонентов создает глубокий, сильный и мужественный характер в парфюмерии.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section" id="stats">
+            <div class="container stats-container">
+                
+                <div class="stat-item" id="stat-bottles">
+                    <div class="stat-number" data-target="200">0</div>
+                    <div class="stat-plus">+</div>
+                    <div class="stat-label">Флаконов в коллекции</div>
+                </div>
+
+                <div class="stat-item" id="stat-reviews">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-percent">%</div>
+                    <div class="stat-label">Честные обзоры</div>
+                </div>
+
+                <div class="stat-item" id="stat-sponsored">
+                    <div class="stat-number" data-target="0">0</div>
+                    <div class="stat-label">Проплаченных восторгов</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Articles & Blog Section -->
+        <section class="articles-section" id="articles">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Парфюмерный архив</span>
+                    <h2 class="section-title">Статьи и Обзоры</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <!-- Articles Filter Tabs -->
+                <div class="filters-container">
+                    <button class="filter-tab active" data-filter="all" id="filter-all">Все публикации</button>
+                    <button class="filter-tab" data-filter="reviews" id="filter-reviews">Обзоры ароматов</button>
+                    <button class="filter-tab" data-filter="stories" id="filter-stories">Истории парфюма</button>
+                    <button class="filter-tab" data-filter="theory" id="filter-theory">Теория и гайды</button>
+                </div>
+
+                <!-- Articles Grid (Will be dynamically populated, but fallback structure for SEO) -->
+                <div class="articles-grid" id="articles-grid">
+                    <!-- Fallback items for SEO / SSR simulator -->
+                    <article class="article-card" data-id="1" data-category="stories">
+                        <div class="card-badge">История</div>
+                        <div class="card-content">
+                            <span class="card-date">Июнь 2026 • 6 мин</span>
+                            <h3>В поисках «Comandor»: почему шедевры уходят в историю?</h3>
+                            <p>Воспоминание об отцовском аромате Dzintars "Comandor" и расследование о том, можно ли воссоздать легендарные формулы ушедших эпох.</p>
+                            <span class="read-more-btn">Читать статью →</span>
+                        </div>
+                    </article>
+                    <article class="article-card" data-id="2" data-category="reviews">
+                        <div class="card-badge">Обзор</div>
+                        <div class="card-content">
+                            <span class="card-date">Май 2026 • 8 мин</span>
+                            <h3>Арабский восток: парфюмерные сокровища за скромный бюджет</h3>
+                            <p>Честный разбор арабских брендов: где скрываются шедевры, способные потягаться с нишей, а где — дешевая синтетика в пафосном стекле.</p>
+                            <span class="read-more-btn">Читать статью →</span>
+                        </div>
+                    </article>
+                    <article class="article-card" data-id="3" data-category="theory">
+                        <div class="card-badge">Теория</div>
+                        <div class="card-content">
+                            <span class="card-date">Апрель 2026 • 5 мин</span>
+                            <h3>Анатомия кожаных ароматов: от дёгтя до мягкой замши</h3>
+                            <p>Как создается нота кожи в современной парфюмерии, какие бывают типы кожаных аккордов и почему они так притягательны.</p>
+                            <span class="read-more-btn">Читать статью →</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Article Reader Modal (Slide-in right overlay) -->
+        <div class="reader-modal" id="reader-modal" aria-hidden="true" role="dialog">
+            <div class="modal-backdrop" id="modal-backdrop"></div>
+            <div class="modal-body" id="modal-body">
+                <button class="modal-close" id="modal-close-btn" aria-label="Закрыть статью">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                    <span>Назад</span>
+                </button>
+                <div class="reader-progress" id="reader-progress"></div>
+                <div class="reader-container" id="reader-content-area">
+                    <!-- Dynamic content gets loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <section class="contacts-section" id="contacts">
+            <div class="container">
+                <div class="contacts-grid">
+                    
+                    <!-- Left: Contact info -->
+                    <div class="contacts-info">
+                        <span class="section-subtitle">Давайте общаться</span>
+                        <h2 class="section-title-left">Напишите мне</h2>
+                        <div class="title-line-left"></div>
+                        <p class="contacts-desc">
+                            Интересуют коллаборации, хотите предложить редкий аромат на обзор или обсудить ольфакторный опыт? Пишите, я всегда открыт к общению с единомышленниками.
+                        </p>
+                        
+                        <div class="social-channels">
+                            <a href="https://www.youtube.com/@FragranceMania" target="_blank" class="social-link-card" id="social-yt">
+                                <div class="social-icon-box">
+                                    <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.516 0-9.387.507a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.507 9.387.507 9.387.507s7.517 0 9.387-.507a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                </div>
+                                <div class="social-meta">
+                                    <h4>YouTube</h4>
+                                    <span>Fragrance Mania обзоры</span>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="social-link-card" id="social-tg">
+                                <div class="social-icon-box">
+                                    <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .24z"/></svg>
+                                </div>
+                                <div class="social-meta">
+                                    <h4>Telegram</h4>
+                                    <span>@fragrancemania</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Form -->
+                    <div class="contacts-form-box">
+                        <form id="contact-form" action="#" method="POST" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="form-name" required placeholder=" ">
+                                <label for="form-name">Ваше имя</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="form-email" required placeholder=" ">
+                                <label for="form-email">Электронная почта</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="form-message" required rows="5" placeholder=" "></textarea>
+                                <label for="form-message">Ваше сообщение</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit" id="form-submit-btn">Отправить сообщение</button>
+                            <div class="form-status" id="form-status-msg"></div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <span class="logo-accent">Fragrance</span> Mania
+                <p class="footer-tagline">Парфюмерия без иллюзий и фильтров.</p>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 Fragrance Mania. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <!-- App Script -->
+    <script src="app.js"></script>
+</body>
+</html>
