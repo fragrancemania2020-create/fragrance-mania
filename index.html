@@ -234,41 +234,14 @@
                     <button class="filter-tab" data-filter="theory" id="filter-theory">Теория и гайды</button>
                 </div>
 
-                <!-- Articles Grid (Will be dynamically populated, but fallback structure for SEO) -->
+                <!-- Articles Grid -->
                 <div class="articles-grid" id="articles-grid">
-                    <!-- Fallback items for SEO / SSR simulator -->
-                    <article class="article-card" data-id="1" data-category="stories">
-                        <div class="card-badge">История</div>
-                        <div class="card-content">
-                            <span class="card-date">Июнь 2026 • 6 мин</span>
-                            <h3>В поисках «Comandor»: почему шедевры уходят в историю?</h3>
-                            <p>Воспоминание об отцовском аромате Dzintars "Comandor" и расследование о том, можно ли воссоздать легендарные формулы ушедших эпох.</p>
-                            <span class="read-more-btn">Читать статью →</span>
-                        </div>
-                    </article>
-                    <article class="article-card" data-id="2" data-category="reviews">
-                        <div class="card-badge">Обзор</div>
-                        <div class="card-content">
-                            <span class="card-date">Май 2026 • 8 мин</span>
-                            <h3>Арабский восток: парфюмерные сокровища за скромный бюджет</h3>
-                            <p>Честный разбор арабских брендов: где скрываются шедевры, способные потягаться с нишей, а где — дешевая синтетика в пафосном стекле.</p>
-                            <span class="read-more-btn">Читать статью →</span>
-                        </div>
-                    </article>
-                    <article class="article-card" data-id="3" data-category="theory">
-                        <div class="card-badge">Теория</div>
-                        <div class="card-content">
-                            <span class="card-date">Апрель 2026 • 5 мин</span>
-                            <h3>Анатомия кожаных ароматов: от дёгтя до мягкой замши</h3>
-                            <p>Как создается нота кожи в современной парфюмерии, какие бывают типы кожаных аккордов и почему они так притягательны.</p>
-                            <span class="read-more-btn">Читать статью →</span>
-                        </div>
-                    </article>
+                    <!-- Будет загружено динамически из app.js -->
                 </div>
             </div>
         </section>
 
-        <!-- Dynamic Article Reader Modal (Slide-in right overlay) -->
+        <!-- Dynamic Article Reader Modal -->
         <div class="reader-modal" id="reader-modal" aria-hidden="true" role="dialog">
             <div class="modal-backdrop" id="modal-backdrop"></div>
             <div class="modal-body" id="modal-body">
@@ -281,7 +254,7 @@
                 </button>
                 <div class="reader-progress" id="reader-progress"></div>
                 <div class="reader-container" id="reader-content-area">
-                    <!-- Dynamic content gets loaded here -->
+                    <!-- Заполняется динамически -->
                 </div>
             </div>
         </div>
@@ -311,13 +284,15 @@
                                 </div>
                             </a>
                             
-                            <a href="#" class="social-link-card" id="social-tg">
+                            <a href="https://www.facebook.com/fragrance.mania.2020/" target="_blank" class="social-link-card" id="social-fb">
                                 <div class="social-icon-box">
-                                    <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .24z"/></svg>
+                                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                    </svg>
                                 </div>
                                 <div class="social-meta">
-                                    <h4>Telegram</h4>
-                                    <span>@fragrancemania</span>
+                                    <h4>Facebook</h4>
+                                    <span>fragrance.mania.2020</span>
                                 </div>
                             </a>
                         </div>
